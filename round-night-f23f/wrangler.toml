@@ -8,6 +8,14 @@ kv_namespaces = [
     { binding = "testEnv", id = "7453285f286241e29def283777e56d78" }
 ]
 
+[[entrypoints]]
+script = "index.js"
+name = "index"
+
+[[entrypoints]]
+script = "test.js"
+name = "test"
+
 [ai]
 binding = "AI"
 
