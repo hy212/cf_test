@@ -12,7 +12,7 @@ export default {
 	async fetch(request, env, ctx) {
 		let value = await env.testEnv.get("key");
 		const response = await env.AI.run('@cf/meta/llama-3-8b-instruct', {
-				prompt: "what the color of sunflowers"
+				prompt: "what the color of sunflowers 222"
 			}
 		);
 		return new Response(JSON.stringify({
