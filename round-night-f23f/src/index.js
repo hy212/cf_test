@@ -7,12 +7,13 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
+import {KV_NAME, testPrompt} from "./constants/common";
 
 export default {
 	async fetch(request, env, ctx) {
-		let value = await env.testEnv.get("key");
+		let value = await env[KV_NAME].get("key");
 		const response = await env.AI.run('@cf/meta/llama-3-8b-instruct', {
-				prompt: "What is the origin of the phrase Hello, World"
+				prompt: testPrompt
 			}
 		);
 		return new Response(JSON.stringify({
