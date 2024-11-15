@@ -4,7 +4,7 @@
     "build_output_dir": "."
   },
   "router_config": {
-    "router_type": "AUTO",
+    "router_type": "Custom",
     "router_map": {}
   }
 }
